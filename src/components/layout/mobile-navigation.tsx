@@ -2,6 +2,7 @@
 
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import type { NavigationItem } from "@/data/site-config";
@@ -12,6 +13,7 @@ type MobileNavigationProps = {
 
 export function MobileNavigation({ items }: MobileNavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -39,7 +41,7 @@ export function MobileNavigation({ items }: MobileNavigationProps) {
             {items.map((item) => (
               <li key={item.label}>
                 {item.href ? (
-                  <Link aria-current={item.isActive ? "page" : undefined} className={item.isActive ? "mobile-nav-link text-brand-red" : "mobile-nav-link text-charcoal"} href={item.href} onClick={() => setIsOpen(false)}>
+                  <Link aria-current={(item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)) ? "page" : undefined} className={(item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)) ? "mobile-nav-link text-brand-red" : "mobile-nav-link text-charcoal"} href={item.href} onClick={() => setIsOpen(false)}>
                     {item.label}
                     {item.hasDropdown && <ChevronDown aria-hidden="true" className="size-4" />}
                   </Link>

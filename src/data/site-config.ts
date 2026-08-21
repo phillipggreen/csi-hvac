@@ -2,7 +2,6 @@ export type NavigationItem = {
   label: string;
   href: string | null;
   hasDropdown?: boolean;
-  isActive?: boolean;
 };
 
 export type BusinessHour = {
@@ -43,8 +42,8 @@ export const siteConfig: SiteConfig = {
     { day: "Sunday", hours: "Closed" },
   ],
   navigation: [
-    { label: "Home", href: "/", isActive: true },
-    { label: "HVAC Services", href: null },
+    { label: "Home", href: "/" },
+    { label: "HVAC Services", href: "/hvac-services" },
     { label: "Restaurant Equipment Services", href: null },
     { label: "Service Areas", href: null, hasDropdown: true },
     { label: "Contact", href: null, hasDropdown: true },

@@ -6,7 +6,7 @@ import { ContentContainer } from "@/components/shared/content-container";
 import { siteConfig } from "@/data/site-config";
 
 const quickLinks = [
-  { label: "HVAC Services", href: null },
+  { label: "HVAC Services", href: "/hvac-services" },
   { label: "Restaurant Equipment Services", href: null },
   { label: "Call Us", href: siteConfig.phone.href },
   { label: "Contact Us", href: null },

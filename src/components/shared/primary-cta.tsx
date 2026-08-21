@@ -7,7 +7,7 @@ type PrimaryCtaProps = {
   children: ReactNode;
   className?: string;
   href: string;
-  tone?: "red" | "blue";
+  tone?: "red" | "blue" | "white";
 } & Omit<ComponentProps<typeof Link>, "children" | "className" | "href">;
 
 export function PrimaryCta({ children, className, href, tone = "red", ...props }: PrimaryCtaProps) {
@@ -15,9 +15,9 @@ export function PrimaryCta({ children, className, href, tone = "red", ...props }
     <Link
       className={cn(
         "inline-flex min-h-11 items-center justify-center px-6 py-3 text-sm font-extrabold uppercase text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2",
-        tone === "red"
-          ? "bg-brand-red hover:bg-brand-red-dark focus-visible:outline-brand-red"
-          : "bg-brand-blue hover:bg-brand-blue-light focus-visible:outline-brand-blue",
+        tone === "red" && "bg-brand-red hover:bg-brand-red-dark focus-visible:outline-brand-red",
+        tone === "blue" && "bg-brand-blue hover:bg-brand-blue-light focus-visible:outline-brand-blue",
+        tone === "white" && "bg-white text-charcoal hover:bg-soft-gray focus-visible:outline-white",
         className,
       )}
       href={href}
