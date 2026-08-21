@@ -9,7 +9,7 @@ const quickLinks = [
   { label: "HVAC Services", href: "/hvac-services" },
   { label: "Restaurant Equipment Services", href: "/restaurant-equipment-services" },
   { label: "Call Us", href: siteConfig.phone.href },
-  { label: "Contact Us", href: null },
+  { label: "Contact Us", href: "/contact" },
 ] as const;
 
 export function Footer() {
