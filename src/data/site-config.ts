@@ -45,7 +45,7 @@ export const siteConfig: SiteConfig = {
     { label: "Home", href: "/" },
     { label: "HVAC Services", href: "/hvac-services" },
     { label: "Restaurant Equipment Services", href: "/restaurant-equipment-services" },
-    { label: "Service Areas", href: null, hasDropdown: true },
+    { label: "Service Areas", href: "/service-areas/lexington-ky", hasDropdown: true },
     { label: "Contact", href: null, hasDropdown: true },
   ],
   socialLinks: [],
