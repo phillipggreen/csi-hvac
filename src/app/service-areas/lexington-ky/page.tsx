@@ -17,7 +17,7 @@ import { lexingtonServiceArea } from "@/data/service-areas";
 export const metadata: Metadata = {
   title: "HVAC & Restaurant Equipment Services in Lexington, KY",
   description:
-    "HVAC installation, repair, maintenance, commercial HVAC, and restaurant equipment services from Comfort Specialist in Lexington, Kentucky.",
+    "HVAC installation, repair, maintenance, commercial HVAC, and restaurant equipment services from Comfort Specialist Heating & Cooling in Lexington, Kentucky.",
 };
 
 export default function LexingtonServiceAreaPage() {

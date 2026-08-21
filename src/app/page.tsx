@@ -10,7 +10,7 @@ import { Testimonials } from "@/components/home/testimonials";
 import { WhyChooseUs } from "@/components/home/why-choose-us";
 
 export const metadata: Metadata = {
-  title: "HVAC Services in Richmond, KY",
+  title: "HVAC & Restaurant Equipment Services in Richmond, KY | Comfort Specialist Heating & Cooling",
   description: "Comfort Specialist Heating & Cooling provides HVAC and restaurant equipment services in Richmond, Kentucky.",
 };
 

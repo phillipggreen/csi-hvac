@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { siteConfig } from "@/data/site-config";
 
 export const metadata: Metadata = {
-  title: "Contact Comfort Specialist Heating & Cooling",
+  title: "Contact Us",
   description:
     "Call Comfort Specialist Heating & Cooling to discuss HVAC or restaurant equipment service in Richmond, Kentucky.",
 };

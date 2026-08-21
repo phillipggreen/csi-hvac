@@ -10,7 +10,7 @@ import { restaurantEquipmentContent } from "@/data/restaurant-equipment-content"
 export const metadata: Metadata = {
   title: "Restaurant Equipment Services in Richmond, KY",
   description:
-    "Restaurant equipment repair, installation, replacement, and maintenance from Comfort Specialist in Richmond, Kentucky.",
+    "Restaurant equipment repair, installation, replacement, and maintenance from Comfort Specialist Heating & Cooling in Richmond, Kentucky.",
 };
 
 export default function RestaurantEquipmentServicesPage() {

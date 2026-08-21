@@ -132,11 +132,15 @@ export function RestaurantServiceCards() {
 }
 
 export function LexingtonFaqSection() {
+  const answeredFaqs = lexingtonServiceArea.faqs.filter((faq) => faq.answer !== null);
+
+  if (answeredFaqs.length === 0) return null;
+
   return (
     <section className="py-14 sm:py-16 lg:py-20">
       <SectionHeading centered className="section-title-rule">Frequently Asked Questions</SectionHeading>
       <ContentContainer className="mt-12" size="faq">
-        <FaqAccordion idPrefix="lexington-faq" items={lexingtonServiceArea.faqs} />
+        <FaqAccordion idPrefix="lexington-faq" items={answeredFaqs} />
       </ContentContainer>
     </section>
   );
