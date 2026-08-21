@@ -2,6 +2,7 @@ export type NavigationItem = {
   label: string;
   href: string | null;
   hasDropdown?: boolean;
+  children?: NavigationItem[];
 };
 
 export type BusinessHour = {
@@ -17,11 +18,18 @@ export type SiteConfig = {
   phone: { display: string; href: string };
   email: null;
   address: null;
+  googleReviewUrl: string | null;
   businessHours: BusinessHour[];
   navigation: NavigationItem[];
   socialLinks: NavigationItem[];
   serviceAreas: string[];
 };
+
+export const feedbackRoutes = {
+  root: "/feedback",
+  great: "/feedback/great",
+  notGreat: "/feedback/not-great",
+} as const;
 
 export const siteConfig: SiteConfig = {
   name: "Comfort Specialist Heating & Cooling",
@@ -32,6 +40,7 @@ export const siteConfig: SiteConfig = {
   phone: { display: "(859) 661-1965", href: "tel:+18596611965" },
   email: null,
   address: null,
+  googleReviewUrl: null,
   businessHours: [
     { day: "Monday", hours: "8 AM - 5 PM" },
     { day: "Tuesday", hours: "8 AM - 5 PM" },
@@ -46,7 +55,16 @@ export const siteConfig: SiteConfig = {
     { label: "HVAC Services", href: "/hvac-services" },
     { label: "Restaurant Equipment Services", href: "/restaurant-equipment-services" },
     { label: "Service Areas", href: "/service-areas/lexington-ky", hasDropdown: true },
-    { label: "Contact", href: "/contact" },
+    {
+      label: "Contact",
+      href: "/contact",
+      hasDropdown: true,
+      children: [
+        { label: "Contact", href: "/contact" },
+        { label: "Feedback", href: feedbackRoutes.root },
+        { label: "Reviews", href: "/reviews" },
+      ],
+    },
   ],
   socialLinks: [],
   serviceAreas: [
