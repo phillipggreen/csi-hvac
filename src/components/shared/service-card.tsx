@@ -1,11 +1,15 @@
 import {
   CircleHelp,
   Cog,
+  Droplets,
+  Flame,
   Gauge,
   Hammer,
   RefreshCw,
   Search,
   Sparkles,
+  Snowflake,
+  Utensils,
   Wind,
   Wrench,
 } from "lucide-react";
@@ -22,7 +26,11 @@ export type ServiceCardIcon =
   | "cleaning"
   | "troubleshooting"
   | "ductwork"
-  | "thermostat";
+  | "thermostat"
+  | "refrigeration"
+  | "oven"
+  | "dishwasher"
+  | "cooking";
 
 export type ServiceCardProps = {
   ctaLabel?: string;
@@ -43,6 +51,10 @@ const icons = {
   troubleshooting: CircleHelp,
   ductwork: Wind,
   thermostat: Gauge,
+  refrigeration: Snowflake,
+  oven: Flame,
+  dishwasher: Droplets,
+  cooking: Utensils,
 };
 
 export function ServiceCard({ ctaLabel, density = "default", description, icon, title, tone = "blue" }: ServiceCardProps) {

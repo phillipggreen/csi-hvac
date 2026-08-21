@@ -7,7 +7,7 @@ import { siteConfig } from "@/data/site-config";
 
 const quickLinks = [
   { label: "HVAC Services", href: "/hvac-services" },
-  { label: "Restaurant Equipment Services", href: null },
+  { label: "Restaurant Equipment Services", href: "/restaurant-equipment-services" },
   { label: "Call Us", href: siteConfig.phone.href },
   { label: "Contact Us", href: null },
 ] as const;
