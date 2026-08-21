@@ -2,15 +2,7 @@ import { ContentContainer } from "@/components/shared/content-container";
 import { PrimaryCta } from "@/components/shared/primary-cta";
 import { ReviewCard } from "@/components/reviews/review-card";
 import { customerReviews } from "@/data/reviews";
-import { feedbackRoutes } from "@/data/site-config";
-
-function UnavailableReviewAction({ children }: { children: React.ReactNode }) {
-  return (
-    <span aria-disabled="true" className="inline-flex min-h-11 cursor-default items-center justify-center bg-brand-red px-6 py-3 text-sm font-extrabold uppercase text-white">
-      {children}
-    </span>
-  );
-}
+import { feedbackRoutes, siteConfig } from "@/data/site-config";
 
 export function ReviewsContent() {
   return (
@@ -23,7 +15,13 @@ export function ReviewsContent() {
           {customerReviews.map((review) => <ReviewCard key={`${review.name}-${review.date}`} review={review} />)}
         </div>
         <div className="mt-12 text-center">
-          <UnavailableReviewAction>View More Reviews</UnavailableReviewAction>
+          <PrimaryCta
+            href={siteConfig.googleReviewUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            View More Reviews
+          </PrimaryCta>
         </div>
       </ContentContainer>
     </section>

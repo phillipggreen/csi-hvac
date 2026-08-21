@@ -18,7 +18,7 @@ export type SiteConfig = {
   phone: { display: string; href: string };
   email: null;
   address: null;
-  googleReviewUrl: string | null;
+  googleReviewUrl: string;
   businessHours: BusinessHour[];
   navigation: NavigationItem[];
   socialLinks: NavigationItem[];
@@ -40,7 +40,7 @@ export const siteConfig: SiteConfig = {
   phone: { display: "(859) 661-1965", href: "tel:+18596611965" },
   email: null,
   address: null,
-  googleReviewUrl: null,
+  googleReviewUrl: "https://maps.app.goo.gl/SekvS5zCoHzVVw7E7",
   businessHours: [
     { day: "Monday", hours: "8 AM - 5 PM" },
     { day: "Tuesday", hours: "8 AM - 5 PM" },

@@ -40,21 +40,16 @@ function GoogleReviewCallout() {
       <span aria-hidden="true" className="flex gap-1 text-[#fbbc05]">
         {Array.from({ length: 5 }, (_, index) => <Star className="size-5 fill-current" key={index} />)}
       </span>
-      {!siteConfig.googleReviewUrl && <span className="text-sm font-semibold text-charcoal/65">Review link pending</span>}
     </>
   );
 
   const className = "mx-auto flex min-h-44 w-full max-w-sm flex-col items-center justify-center gap-3 border border-slate-200 bg-white px-8 py-7 text-center shadow-sm";
 
-  if (!siteConfig.googleReviewUrl) {
-    return <div aria-disabled="true" className={className}>{content}</div>;
-  }
-
   return (
     <a
       className={`${className} transition hover:border-brand-red hover:shadow-md focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-brand-red`}
       href={siteConfig.googleReviewUrl}
-      rel="noreferrer"
+      rel="noopener noreferrer"
       target="_blank"
     >
       {content}
