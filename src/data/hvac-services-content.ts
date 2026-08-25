@@ -1,5 +1,3 @@
-import type { ServiceCardProps } from "@/components/shared/service-card";
-
 export const hvacServicesContent = {
   hero: {
     title: "HVAC Services in Richmond, KY",
@@ -79,7 +77,7 @@ export const hvacServicesContent = {
       description:
         "Modern thermostats and zoning systems allow you to take control of your home or business’s comfort like never before. We install programmable and smart thermostats that help you manage temperatures efficiently and save on energy costs. For multi-story homes or local office suites, system zoning allows you to customize heating and cooling levels in different rooms for optimal comfort and energy savings, ensuring you only pay to condition the spaces you’re actually using.",
     },
-  ] satisfies ServiceCardProps[],
+  ] as const,
   supportFeatures: [
     {
       tone: "blue",

@@ -16,7 +16,7 @@ export function Header() {
         </Link>
         <Navigation items={siteConfig.navigation} />
         <div className="flex items-center gap-1 sm:gap-3">
-          <Link aria-label={`Call ${siteConfig.phone.display}`} className="inline-flex min-h-11 items-center gap-2 bg-brand-red px-3 text-xs font-black uppercase tracking-[0.04em] text-white shadow-sm hover:-translate-y-0.5 hover:bg-brand-red-dark focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-red sm:min-h-12 sm:px-5 lg:text-sm" href={siteConfig.phone.href}>
+          <Link aria-label={`Call ${siteConfig.phone.display}`} className="inline-flex min-h-11 min-w-11 items-center justify-center gap-2 bg-brand-red px-3 text-xs font-black uppercase tracking-[0.04em] text-white shadow-sm hover:-translate-y-0.5 hover:bg-brand-red-dark focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-red sm:min-h-12 sm:px-5 lg:text-sm" href={siteConfig.phone.href}>
             <Phone aria-hidden="true" className="size-4 fill-current" />
             <span className="hidden sm:inline">{siteConfig.phone.display}</span>
           </Link>

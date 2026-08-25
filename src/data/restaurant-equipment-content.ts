@@ -1,5 +1,3 @@
-import type { ServiceCardProps } from "@/components/shared/service-card";
-
 export const restaurantEquipmentContent = {
   hero: {
     title: "Restaurant Equipment Services in Richmond, KY",
@@ -70,7 +68,7 @@ export const restaurantEquipmentContent = {
       description:
         "Ice makers and stove vents may not be the first appliances you think of, but they play crucial roles in food service. We repair and install commercial ice machines to ensure your restaurant never runs out of ice during busy service hours. For stove vents, we provide installation, cleaning, and repair services to keep your kitchen properly ventilated, reduce smoke buildup, and improve safety conditions for staff.",
     },
-  ] satisfies ServiceCardProps[],
+  ] as const,
   supportFeatures: [
     {
       tone: "blue",

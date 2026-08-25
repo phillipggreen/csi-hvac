@@ -133,68 +133,6 @@ a.footer-link:hover {
   color: #ff9b9d;
 }
 
-.section-title-rule::after {
-  display: block;
-  width: 12rem;
-  max-width: 60%;
-  height: 0.2rem;
-  margin: 1.5rem auto 0;
-  background: var(--brand-blue);
-  content: "";
-}
-
-.faq-trigger {
-  display: flex;
-  width: 100%;
-  min-height: 4rem;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  background: linear-gradient(100deg, #c62226 0%, #7d174b 45%, #171078 100%);
-  padding: 1rem 1.25rem;
-  text-align: left;
-  font-size: 0.8rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: white;
-}
-
-.faq-trigger:hover {
-  filter: brightness(1.08);
-}
-
-.faq-trigger:focus-visible {
-  outline: 3px solid var(--brand-red);
-  outline-offset: 3px;
-}
-
-.wave {
-  position: absolute;
-  left: -10%;
-  width: 120%;
-  height: 12rem;
-  border-radius: 50%;
-  background: rgb(10 28 100 / 24%);
-  pointer-events: none;
-}
-
-.wave-top {
-  top: -8.5rem;
-  transform: rotate(5deg);
-}
-
-.wave-bottom {
-  bottom: -9rem;
-  transform: rotate(-5deg);
-}
-
-@media (min-width: 640px) {
-  .faq-trigger {
-    padding-inline: 1.5rem;
-    font-size: 0.9rem;
-  }
-}
-
 @media (min-width: 768px) {
   .footer-link {
     justify-content: flex-start;
