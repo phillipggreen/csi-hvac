@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 
-import { InteriorPageHero } from "@/components/layout/interior-page-hero";
-import { ComprehensiveHvac } from "@/components/services/comprehensive-hvac";
-import { HvacFinalCta, HvacWhyChooseSection, NewBuildsSection } from "@/components/services/hvac-lower-sections";
-import { HvacServiceGrid } from "@/components/services/hvac-service-grid";
-import { HvacSupportFeatures } from "@/components/services/hvac-support-features";
-import { hvacServicesContent } from "@/data/hvac-services-content";
+import { HvacPerformanceAndConstruction } from "@/components/services/hvac-performance-and-construction";
+import { HvacServiceIntroduction } from "@/components/services/hvac-service-introduction";
+import { HvacServiceOfferings } from "@/components/services/hvac-service-offerings";
+import { HvacTrustAndCta } from "@/components/services/hvac-trust-and-cta";
 
 export const metadata: Metadata = {
   title: "HVAC Services in Richmond, KY",
@@ -15,17 +13,11 @@ export const metadata: Metadata = {
 
 export default function HvacServicesPage() {
   return (
-    <>
-      <InteriorPageHero
-        description={hvacServicesContent.hero.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-        title={hvacServicesContent.hero.title}
-      />
-      <ComprehensiveHvac />
-      <HvacServiceGrid />
-      <HvacSupportFeatures />
-      <NewBuildsSection />
-      <HvacWhyChooseSection />
-      <HvacFinalCta />
-    </>
+    <div className="modern-service-page">
+      <HvacServiceIntroduction />
+      <HvacServiceOfferings />
+      <HvacPerformanceAndConstruction />
+      <HvacTrustAndCta />
+    </div>
   );
 }

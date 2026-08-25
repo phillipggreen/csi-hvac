@@ -107,7 +107,8 @@ a.mobile-nav-link:hover {
 }
 
 .site-header,
-.modern-home {
+.modern-home,
+.modern-service-page {
   font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
