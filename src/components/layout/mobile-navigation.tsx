@@ -38,14 +38,14 @@ export function MobileNavigation({ items }: MobileNavigationProps) {
         aria-controls="mobile-navigation"
         aria-expanded={isOpen}
         aria-label={isOpen ? "Close navigation" : "Open navigation"}
-        className="inline-flex size-11 items-center justify-center text-brand-blue hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
+        className="inline-flex size-11 items-center justify-center text-brand-navy hover:bg-blue-gray focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
         onClick={() => setIsOpen((open) => !open)}
         type="button"
       >
         {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
       </button>
       {isOpen && (
-        <nav aria-label="Mobile navigation" className="absolute inset-x-0 top-full border-b-4 border-brand-red bg-white shadow-xl" id="mobile-navigation">
+        <nav aria-label="Mobile navigation" className="absolute inset-x-0 top-full max-h-[calc(100vh-5rem)] overflow-y-auto border-b-4 border-brand-red bg-white shadow-xl sm:max-h-[calc(100vh-6rem)]" id="mobile-navigation">
           <ul className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
             {items.map((item) => {
               const hasChildren = Boolean(item.children?.length);

@@ -31,7 +31,7 @@ export function Navigation({ items }: NavigationProps) {
 
   return (
     <nav aria-label="Primary navigation" className="hidden xl:block">
-      <ul className="flex items-center gap-2">
+      <ul className="flex items-center gap-0.5 2xl:gap-1">
         {items.map((item) => {
           const hasChildren = Boolean(item.children?.length);
           const directlyActive = routeIsActive(item.href);
@@ -54,7 +54,7 @@ export function Navigation({ items }: NavigationProps) {
               <div className="flex items-center">
                 <Link
                   aria-current={directlyActive ? "page" : undefined}
-                  className={groupActive ? "nav-link text-brand-red" : "nav-link text-charcoal hover:text-brand-red"}
+                  className={groupActive ? "nav-link nav-link-active text-brand-red" : "nav-link text-charcoal hover:text-brand-red"}
                   href={item.href}
                   onFocus={() => hasChildren && setOpenItem(item.label)}
                 >
@@ -82,7 +82,7 @@ export function Navigation({ items }: NavigationProps) {
               </span>
             )}
             {hasChildren && isOpen && (
-              <ul className="absolute top-full right-0 min-w-48 border border-slate-200 bg-white py-2 shadow-lg" id={submenuId}>
+              <ul className="absolute top-full right-0 min-w-52 border border-slate-200 border-t-2 border-t-brand-red bg-white py-2 shadow-[0_18px_40px_rgba(15,31,69,0.16)]" id={submenuId}>
                 {item.children?.map((child) => {
                   const active = routeIsActive(child.href);
                   return (
@@ -90,7 +90,7 @@ export function Navigation({ items }: NavigationProps) {
                       {child.href && (
                         <Link
                           aria-current={active ? "page" : undefined}
-                          className={active ? "block min-h-11 px-5 py-3 text-sm font-extrabold uppercase text-brand-red" : "block min-h-11 px-5 py-3 text-sm font-extrabold uppercase text-charcoal hover:bg-soft-gray hover:text-brand-red focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-brand-blue"}
+                          className={active ? "block min-h-11 bg-blue-gray px-5 py-3 text-sm font-black uppercase tracking-[0.04em] text-brand-red" : "block min-h-11 px-5 py-3 text-sm font-black uppercase tracking-[0.04em] text-charcoal hover:bg-blue-gray hover:text-brand-red focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-brand-blue"}
                           href={child.href}
                           onClick={() => setOpenItem(null)}
                         >

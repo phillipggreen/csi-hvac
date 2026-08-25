@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 
-import { FaqSection } from "@/components/home/faq-section";
-import { HomeCta } from "@/components/home/home-cta";
-import { HomeHero } from "@/components/home/home-hero";
-import { HomeIntro } from "@/components/home/home-intro";
-import { HomeServiceCards } from "@/components/home/home-service-cards";
-import { HvacOverview } from "@/components/home/hvac-overview";
-import { Testimonials } from "@/components/home/testimonials";
-import { WhyChooseUs } from "@/components/home/why-choose-us";
+import { HomeIntroductionModern } from "@/components/home/home-introduction-modern";
+import { ModernHomeCta } from "@/components/home/modern-home-cta";
+import { ModernHomeHero } from "@/components/home/modern-home-hero";
+import { HomeSelectedReviews } from "@/components/home/home-selected-reviews";
+import { HomeServiceAreaHighlight } from "@/components/home/home-service-area-highlight";
+import { HomeTrustModern } from "@/components/home/home-trust-modern";
+import { PrimaryServiceCategories } from "@/components/home/primary-service-categories";
 
 export const metadata: Metadata = {
   title: "HVAC & Restaurant Equipment Services in Richmond, KY | Comfort Specialist Heating & Cooling",
@@ -16,15 +15,14 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <>
-      <HomeHero />
-      <HomeIntro />
-      <HvacOverview />
-      <HomeServiceCards />
-      <WhyChooseUs />
-      <Testimonials />
-      <FaqSection />
-      <HomeCta />
-    </>
+    <div className="modern-home">
+      <ModernHomeHero />
+      <HomeIntroductionModern />
+      <PrimaryServiceCategories />
+      <HomeTrustModern />
+      <HomeSelectedReviews />
+      <HomeServiceAreaHighlight />
+      <ModernHomeCta />
+    </div>
   );
 }

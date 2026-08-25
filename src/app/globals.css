@@ -7,6 +7,8 @@
   --brand-blue-light: #2943aa;
   --brand-red: #b62225;
   --brand-red-dark: #951b1e;
+  --brand-navy: #0c1a3f;
+  --blue-gray: #f0f3f7;
   --charcoal: #171717;
   --soft-gray: #f5f5f5;
 }
@@ -16,6 +18,8 @@
   --color-brand-blue-light: var(--brand-blue-light);
   --color-brand-red: var(--brand-red);
   --color-brand-red-dark: var(--brand-red-dark);
+  --color-brand-navy: var(--brand-navy);
+  --color-blue-gray: var(--blue-gray);
   --color-charcoal: var(--charcoal);
   --color-soft-gray: var(--soft-gray);
 }
@@ -26,6 +30,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 body {
@@ -47,14 +52,40 @@ button {
 }
 
 .nav-link {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.7rem 0.6rem;
   white-space: nowrap;
-  font-size: 0.84rem;
-  font-weight: 800;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.025em;
   text-transform: uppercase;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.25rem;
+  left: 0.6rem;
+  height: 0.125rem;
+  background: var(--brand-red);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.4);
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.nav-link:hover::after,
+.nav-link-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.nav-link:focus-visible {
+  outline: 3px solid var(--brand-red);
+  outline-offset: 2px;
 }
 
 .mobile-nav-link {
@@ -66,28 +97,39 @@ button {
   padding: 0.75rem;
   font-size: 0.875rem;
   font-weight: 800;
+  letter-spacing: 0.025em;
   text-transform: uppercase;
 }
 
 a.mobile-nav-link:hover {
-  background: var(--soft-gray);
+  background: var(--blue-gray);
   color: var(--brand-red);
 }
 
+.site-header,
+.modern-home {
+  font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
 .footer-link {
-  display: block;
+  display: flex;
   width: 100%;
-  background: var(--brand-red);
-  padding: 0.75rem 1rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0.75rem 0.25rem;
   text-align: center;
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 900;
+  letter-spacing: 0.035em;
   text-transform: uppercase;
   color: white;
 }
 
 a.footer-link:hover {
-  background: var(--brand-red-dark);
+  padding-left: 0.5rem;
+  color: #ff9b9d;
 }
 
 .section-title-rule::after {
@@ -149,6 +191,13 @@ a.footer-link:hover {
   .faq-trigger {
     padding-inline: 1.5rem;
     font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-link {
+    justify-content: flex-start;
+    text-align: left;
   }
 }
 

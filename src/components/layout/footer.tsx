@@ -14,8 +14,8 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-brand-blue text-white" id="footer">
-      <ContentContainer className="grid gap-10 py-12 md:grid-cols-[1fr_1.1fr_1fr] lg:py-14">
+    <footer className="bg-brand-navy text-white" id="footer">
+      <ContentContainer className="grid gap-12 py-14 md:grid-cols-[1fr_1.1fr_1fr] lg:py-16">
         <div className="text-center md:border-r md:border-white/10 md:pr-10">
           <Image alt={siteConfig.name} className="mx-auto h-auto w-64 max-w-full" height={398} src="/images/Logo-White.png" width={760} />
           <Link className="mt-6 inline-flex items-center gap-2 font-bold hover:text-white/80" href={siteConfig.phone.href}>
@@ -26,7 +26,7 @@ export function Footer() {
 
         <div>
           <h2 className="text-center text-xl font-extrabold uppercase">Quick Links</h2>
-          <ul className="mt-5 space-y-2">
+          <ul className="mt-5 divide-y divide-white/15 border-y border-white/15">
             {quickLinks.map((item) => (
               <li key={item.label}>
                 {item.href ? (
