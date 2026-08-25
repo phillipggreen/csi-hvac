@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import { InteriorPageHero } from "@/components/layout/interior-page-hero";
 import { ReviewsContent } from "@/components/reviews/reviews-content";
+import { UtilityPageHero } from "@/components/shared/utility-page-hero";
 
 export const metadata: Metadata = {
   title: "Customer Reviews",
@@ -12,7 +12,11 @@ export const metadata: Metadata = {
 export default function ReviewsPage() {
   return (
     <>
-      <InteriorPageHero title="Reviews" />
+      <UtilityPageHero
+        description="Read what customers have shared about their experiences with Comfort Specialist Heating & Cooling."
+        eyebrow="Customer Reviews"
+        title="What Our Customers Say"
+      />
       <ReviewsContent />
     </>
   );

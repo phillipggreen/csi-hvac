@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { NotGreatFeedbackContent } from "@/components/feedback/feedback-content";
-import { InteriorPageHero } from "@/components/layout/interior-page-hero";
+import { UtilityPageHero } from "@/components/shared/utility-page-hero";
 
 export const metadata: Metadata = {
   title: "Share a Concern",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function NotGreatFeedbackPage() {
   return (
     <>
-      <InteriorPageHero title="Feedback" />
+      <UtilityPageHero eyebrow="We're Listening" title="We'd Like the Opportunity to Make It Right." />
       <NotGreatFeedbackContent />
     </>
   );

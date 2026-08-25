@@ -20,18 +20,19 @@ function GoogleSourceLabel() {
 
 export function ReviewCard({ review }: { review: CustomerReview }) {
   return (
-    <figure className="relative overflow-hidden border border-slate-200 bg-white px-6 py-8 text-center shadow-sm sm:px-8">
-      <Quote aria-hidden="true" className="absolute top-5 left-5 size-6 fill-slate-300 text-slate-300" />
-      <GoogleSourceLabel />
-      <div aria-label={`${review.rating} out of 5 stars`} className="mt-5 flex justify-center gap-1 text-amber-400" role="img">
+    <figure className="mb-6 break-inside-avoid-column border border-brand-blue/10 bg-white p-6 shadow-[0_14px_38px_rgba(8,37,68,0.06)] sm:p-8">
+      <div className="flex items-start justify-between gap-5">
+        <GoogleSourceLabel />
+        <Quote aria-hidden="true" className="size-7 shrink-0 fill-brand-blue/10 text-brand-blue/10" />
+      </div>
+      <div aria-label={`${review.rating} out of 5 stars`} className="mt-6 flex gap-1 text-amber-400" role="img">
         {Array.from({ length: review.rating }).map((_, index) => <Star aria-hidden="true" className="size-5 fill-current" key={index} />)}
       </div>
-      <figcaption className="mt-5">
-        <time className="text-xs tracking-[0.16em] text-charcoal/60">{review.date}</time>
-        <h2 className="mt-2 text-lg font-extrabold uppercase tracking-[0.12em] text-charcoal/75">{review.name}</h2>
+      <blockquote className="mt-5 text-[15px] leading-7 text-charcoal/82">“{review.review}”</blockquote>
+      <figcaption className="mt-7 border-t border-brand-blue/10 pt-5">
+        <h2 className="text-base font-black uppercase tracking-[0.08em] text-brand-blue">{review.name}</h2>
+        <time className="mt-1 block text-xs tracking-[0.12em] text-charcoal/55">{review.date}</time>
       </figcaption>
-      <blockquote className="mt-5 leading-7 text-charcoal/90">“{review.review}”</blockquote>
-      <Quote aria-hidden="true" className="mt-7 ml-auto size-6 rotate-180 fill-slate-300 text-slate-300" />
     </figure>
   );
 }

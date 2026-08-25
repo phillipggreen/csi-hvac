@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { GreatFeedbackContent } from "@/components/feedback/feedback-content";
-import { InteriorPageHero } from "@/components/layout/interior-page-hero";
+import { UtilityPageHero } from "@/components/shared/utility-page-hero";
 
 export const metadata: Metadata = {
   title: "Share Your Experience",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function GreatFeedbackPage() {
   return (
     <>
-      <InteriorPageHero title="Spread the Word" />
+      <UtilityPageHero eyebrow="Thank You" title="We're Glad You Had a Great Experience." />
       <GreatFeedbackContent />
     </>
   );
