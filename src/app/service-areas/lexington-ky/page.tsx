@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
 
-import { InteriorPageHero } from "@/components/layout/interior-page-hero";
-import {
-  CommercialHvacBand,
-  HvacInformationCards,
-  LexingtonFaqSection,
-  LexingtonFinalCta,
-  LexingtonWhyChooseSection,
-  LocalizedHvacServices,
-  NewHomeBuildsSection,
-  RestaurantServiceCards,
-  ServiceAreaIntro,
-} from "@/components/service-areas/service-area-sections";
-import { lexingtonServiceArea } from "@/data/service-areas";
+import { LexingtonCommercialAndConstruction } from "@/components/service-areas/lexington-commercial-and-construction";
+import { LexingtonHvacServices } from "@/components/service-areas/lexington-hvac-services";
+import { LexingtonIntroduction } from "@/components/service-areas/lexington-introduction";
+import { LexingtonRestaurantServices } from "@/components/service-areas/lexington-restaurant-services";
+import { LexingtonTrustAndCta } from "@/components/service-areas/lexington-trust-and-cta";
 
 export const metadata: Metadata = {
   title: "HVAC & Restaurant Equipment Services in Lexington, KY",
@@ -22,18 +14,12 @@ export const metadata: Metadata = {
 
 export default function LexingtonServiceAreaPage() {
   return (
-    <>
-      <InteriorPageHero description={<p>{lexingtonServiceArea.hero.description}</p>} title={lexingtonServiceArea.hero.title} />
-      <ServiceAreaIntro {...lexingtonServiceArea.hvacIntro} />
-      <LocalizedHvacServices />
-      <HvacInformationCards />
-      <CommercialHvacBand />
-      <NewHomeBuildsSection />
-      <ServiceAreaIntro {...lexingtonServiceArea.restaurantIntro} />
-      <RestaurantServiceCards />
-      <LexingtonFaqSection />
-      <LexingtonWhyChooseSection />
-      <LexingtonFinalCta />
-    </>
+    <div className="modern-service-page">
+      <LexingtonIntroduction />
+      <LexingtonHvacServices />
+      <LexingtonCommercialAndConstruction />
+      <LexingtonRestaurantServices />
+      <LexingtonTrustAndCta />
+    </div>
   );
 }
