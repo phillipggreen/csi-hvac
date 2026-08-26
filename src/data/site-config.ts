@@ -19,6 +19,10 @@ export type SiteConfig = {
   email: null;
   address: null;
   googleReviewUrl: string;
+  financing: {
+    provider: string;
+    applicationUrl: string | null;
+  };
   businessHours: BusinessHour[];
   navigation: NavigationItem[];
   socialLinks: NavigationItem[];
@@ -41,6 +45,10 @@ export const siteConfig: SiteConfig = {
   email: null,
   address: null,
   googleReviewUrl: "https://maps.app.goo.gl/SekvS5zCoHzVVw7E7",
+  financing: {
+    provider: "Synchrony",
+    applicationUrl: null,
+  },
   businessHours: [
     { day: "Monday", hours: "8 AM - 5 PM" },
     { day: "Tuesday", hours: "8 AM - 5 PM" },
@@ -55,6 +63,7 @@ export const siteConfig: SiteConfig = {
     { label: "HVAC Services", href: "/hvac-services" },
     { label: "Restaurant Equipment Services", href: "/restaurant-equipment-services" },
     { label: "Service Areas", href: "/service-areas/lexington-ky" },
+    { label: "Financing", href: "/financing" },
     {
       label: "Contact",
       href: "/contact",
