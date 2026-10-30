@@ -14,7 +14,7 @@ export type SiteConfig = {
   name: string;
   shortName: string;
   description: string;
-  referenceUrl: string;
+  url: string;
   phone: { display: string; href: string };
   email: null;
   address: null;
@@ -35,12 +35,28 @@ export const feedbackRoutes = {
   notGreat: "/feedback/not-great",
 } as const;
 
+export const publicRoutes = [
+  "/",
+  "/hvac-services",
+  "/restaurant-equipment-services",
+  "/service-areas",
+  "/service-areas/lexington-ky",
+  "/financing",
+  "/contact",
+  "/reviews",
+  feedbackRoutes.root,
+  feedbackRoutes.great,
+  feedbackRoutes.notGreat,
+  "/privacy",
+  "/terms",
+] as const;
+
 export const siteConfig: SiteConfig = {
   name: "Comfort Specialist Heating & Cooling",
   shortName: "Comfort Specialist",
   description:
     "HVAC and restaurant equipment services from Comfort Specialist Heating & Cooling in Richmond, Kentucky.",
-  referenceUrl: "https://comfortspecialistheatingandcooling.com/",
+  url: "https://comfortspecialistheatingandcooling.com",
   phone: { display: "(859) 661-1965", href: "tel:+18596611965" },
   email: null,
   address: null,
@@ -62,7 +78,7 @@ export const siteConfig: SiteConfig = {
     { label: "Home", href: "/" },
     { label: "HVAC Services", href: "/hvac-services" },
     { label: "Restaurant Equipment Services", href: "/restaurant-equipment-services" },
-    { label: "Service Areas", href: "/service-areas/lexington-ky" },
+    { label: "Service Areas", href: "/service-areas" },
     { label: "Financing", href: "/financing" },
     {
       label: "Contact",

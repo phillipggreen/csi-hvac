@@ -5,12 +5,14 @@ import { LexingtonHvacServices } from "@/components/service-areas/lexington-hvac
 import { LexingtonIntroduction } from "@/components/service-areas/lexington-introduction";
 import { LexingtonRestaurantServices } from "@/components/service-areas/lexington-restaurant-services";
 import { LexingtonTrustAndCta } from "@/components/service-areas/lexington-trust-and-cta";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "HVAC & Restaurant Equipment Services in Lexington, KY",
   description:
     "HVAC installation, repair, maintenance, commercial HVAC, and restaurant equipment services from Comfort Specialist Heating & Cooling in Lexington, Kentucky.",
-};
+  path: "/service-areas/lexington-ky",
+});
 
 export default function LexingtonServiceAreaPage() {
   return (
