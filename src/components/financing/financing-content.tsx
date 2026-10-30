@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check, Clock3, Phone } from "lucide-react";
+import { ArrowUpRight, Check, Phone } from "lucide-react";
 
 import { ContentContainer } from "@/components/shared/content-container";
 import { PrimaryCta } from "@/components/shared/primary-cta";
@@ -32,33 +32,36 @@ function FinancingApplicationActions() {
   return (
     <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center">
       {applicationUrl ? (
-        <a
-          aria-label={`Apply for financing through ${siteConfig.financing.provider} (opens in a new tab)`}
-          className="inline-flex min-h-14 items-center justify-center gap-2 bg-brand-red px-7 py-4 text-center text-sm font-extrabold uppercase text-white hover:bg-brand-red-dark focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-white"
-          href={applicationUrl}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Apply for Financing
-          <ArrowUpRight aria-hidden="true" className="size-4" />
-        </a>
+        <>
+          <a
+            aria-label={`Apply for financing through ${siteConfig.financing.provider} (opens in a new tab)`}
+            className="inline-flex min-h-14 items-center justify-center gap-2 bg-brand-red px-7 py-4 text-center text-sm font-extrabold uppercase text-white hover:bg-brand-red-dark focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-white"
+            href={applicationUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Apply for Financing
+            <ArrowUpRight aria-hidden="true" className="size-4" />
+          </a>
+          <a
+            aria-label={`Call Comfort Specialist Heating & Cooling at ${siteConfig.phone.display}`}
+            className="inline-flex min-h-14 items-center justify-center gap-2 bg-white px-7 py-4 text-sm font-extrabold uppercase text-brand-navy hover:bg-blue-gray focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-white"
+            href={siteConfig.phone.href}
+          >
+            <Phone aria-hidden="true" className="size-4 fill-current" />
+            Call {siteConfig.phone.display}
+          </a>
+        </>
       ) : (
-        <div
-          className="inline-flex min-h-14 items-center justify-center gap-3 border border-white/25 bg-white/8 px-6 py-4 text-center text-sm font-extrabold uppercase tracking-[0.025em] text-white/80"
-          role="status"
+        <a
+          aria-label={`Call Comfort Specialist Heating & Cooling at ${siteConfig.phone.display} to apply for financing`}
+          className="inline-flex min-h-14 items-center justify-center gap-2 bg-brand-red px-7 py-4 text-center text-sm font-extrabold uppercase text-white hover:bg-brand-red-dark focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-white"
+          href={siteConfig.phone.href}
         >
-          <Clock3 aria-hidden="true" className="size-5 shrink-0 text-white/60" />
-          Online Financing Application Coming Soon
-        </div>
+          <Phone aria-hidden="true" className="size-4 fill-current" />
+          Call Us to Apply for Financing
+        </a>
       )}
-      <a
-        aria-label={`Call Comfort Specialist Heating & Cooling at ${siteConfig.phone.display}`}
-        className="inline-flex min-h-14 items-center justify-center gap-2 bg-white px-7 py-4 text-sm font-extrabold uppercase text-brand-navy hover:bg-blue-gray focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-white"
-        href={siteConfig.phone.href}
-      >
-        <Phone aria-hidden="true" className="size-4 fill-current" />
-        Call {siteConfig.phone.display}
-      </a>
       <PrimaryCta className="min-h-14 border border-white/35 bg-transparent hover:bg-white/10" href="/contact" tone="white">
         Contact Us
       </PrimaryCta>
@@ -156,7 +159,7 @@ export function FinancingContent() {
               Discuss Your Project and Financing Options
             </h2>
             <p className="mt-6 max-w-3xl text-base leading-8 text-white/72 sm:text-lg">
-              Call Comfort Specialist Heating &amp; Cooling to discuss your service needs, or contact us for more information while online applications are being prepared.
+              Call Comfort Specialist Heating &amp; Cooling to discuss your service needs and apply for financing.
             </p>
             <FinancingApplicationActions />
           </div>

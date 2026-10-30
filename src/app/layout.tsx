@@ -3,10 +3,13 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { siteConfig } from "@/data/site-config";
+import { baseOpenGraph } from "@/lib/metadata";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  openGraph: baseOpenGraph,
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,

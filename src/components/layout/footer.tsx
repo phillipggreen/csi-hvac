@@ -13,6 +13,9 @@ const quickLinks = [
   { label: "Contact Us", href: "/contact" },
 ] as const;
 
+const bottomBarLinkClassName =
+  "underline-offset-4 hover:text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+
 export function Footer() {
   return (
     <footer className="bg-brand-navy text-white" id="footer">
@@ -57,7 +60,7 @@ export function Footer() {
           © {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.
           <span aria-hidden="true"> • </span>
           <a
-            className="underline-offset-4 hover:text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            className={bottomBarLinkClassName}
             href="https://www.greendigitalsolutions.dev/"
             rel="noopener noreferrer"
             target="_blank"
@@ -65,7 +68,11 @@ export function Footer() {
             Built by Green Digital Solutions
           </a>
         </p>
-        <p className="mt-1">Terms &amp; Conditions | Privacy Policy | Sitemap</p>
+        <p className="mt-1">
+          <Link className={bottomBarLinkClassName} href="/terms">Terms &amp; Conditions</Link>
+          <span aria-hidden="true"> | </span>
+          <Link className={bottomBarLinkClassName} href="/privacy">Privacy Policy</Link>
+        </p>
       </div>
     </footer>
   );
