@@ -159,7 +159,7 @@ export function FinancingContent() {
               Discuss Your Project and Financing Options
             </h2>
             <p className="mt-6 max-w-3xl text-base leading-8 text-white/72 sm:text-lg">
-              Call Comfort Specialist Heating &amp; Cooling to discuss your service needs, or contact us for more information while online applications are being prepared.
+              Call Comfort Specialist Heating &amp; Cooling to discuss your service needs and apply for financing.
             </p>
             <FinancingApplicationActions />
           </div>

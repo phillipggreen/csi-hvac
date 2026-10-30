@@ -2,10 +2,21 @@ import type { Metadata } from "next";
 
 import { siteConfig } from "@/data/site-config";
 
+// Served by src/app/opengraph-image.tsx.
+export const shareImage = {
+  url: "/opengraph-image",
+  alt: `${siteConfig.name}: Heating, Cooling & Restaurant Equipment Service`,
+  width: 1200,
+  height: 630,
+  type: "image/png",
+};
+
 export const baseOpenGraph = {
   type: "website",
   locale: "en_US",
   siteName: siteConfig.name,
+  // Listed explicitly because a page's own openGraph replaces the file-based image.
+  images: [shareImage],
 } satisfies Metadata["openGraph"];
 
 type PageMetadataOptions = {
