@@ -25,9 +25,10 @@ const sections: LegalSection[] = [
   {
     title: "Information We Collect",
     body: (
-      <p>
-        This website has no forms, no accounts, and no analytics. We do not ask you to submit personal information online, and we do not use cookies to track your visit.
-      </p>
+      <>
+        <p>This website has no forms and no accounts. We do not ask you to submit personal information online.</p>
+        <p>We use cookieless, anonymous analytics to understand visits. We do not use cookies to track your visit.</p>
+      </>
     ),
   },
   {
@@ -68,7 +69,7 @@ export default function PrivacyPage() {
   return (
     <>
       <UtilityPageHero eyebrow="Privacy" title="Privacy Policy" />
-      <LegalContent lastUpdated="October 30, 2026" sections={sections} />
+      <LegalContent lastUpdated="November 2, 2026" sections={sections} />
     </>
   );
 }
