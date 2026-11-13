@@ -61,8 +61,8 @@ export function Footer() {
           <span aria-hidden="true"> • </span>
           <a
             className={bottomBarLinkClassName}
-            href="https://www.greendigitalsolutions.dev/"
-            rel="noopener noreferrer"
+            href="https://www.greendigitalsolutions.dev/?utm_source=comfortspecialistheatingandcooling.com&utm_medium=referral&utm_content=footer"
+            rel="noopener"
             target="_blank"
           >
             Built by Green Digital Solutions
